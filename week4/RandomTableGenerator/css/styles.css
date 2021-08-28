@@ -1,0 +1,55 @@
+body{
+    font-size: 20px;
+    color: white;
+}
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    animation: fadeIn 4000ms linear;
+}
+
+table td, table th{
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+h1, h2, button{
+    text-transform: uppercase;
+    text-align: center;
+}
+/* I decided to use absolute positioning in order to display the count in a header below the table on the page. */
+h3{
+    position: absolute;
+    top: 80%;
+    right: 40%;
+} 
+
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/* Break points so the web page looks pretty much the same on tablets and smart phones */
+@media screen and (max-width: 1000px){
+    table{
+        width: 75%;
+    }
+    h3{
+        position: absolute;
+        top: 80%;
+        right: 30%;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    table{
+        width: 95%;
+    }
+    h3{
+        position: absolute;
+        top: 90%;
+        right: 30%;
+    } 
+}

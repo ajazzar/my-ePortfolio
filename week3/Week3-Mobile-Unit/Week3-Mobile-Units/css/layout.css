@@ -1,0 +1,19 @@
+.container{
+    padding: 10px;
+    background: black;
+    color: white;
+}
+/*The !important rule will override ALL previous styling rules for that specific property on that element.*/
+.ui-body-c{
+    background: black !important;
+}
+
+.ui-input-text{
+    color: white;
+}
+
+.invalid{
+    text-shadow: none;
+    color: red;
+    min-height: 30px;
+}
