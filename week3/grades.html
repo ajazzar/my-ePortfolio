@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Aaron Jazzar's Week 3 Assignment</title>
+<script>
+function enterGrades()
+{
+    var percent1 = parseFloat(prompt("Enter the Student's first grade from 0-100% without the percent sign.", " "));
+    var percent2 = parseFloat(prompt("Enter the Student's second grade from 0-100% without the percent sign.", " "));
+    var percent3 = parseFloat(prompt("Enter the Student's third grade from 0-100% without the percent sign.", " "));
+    var percent4 = parseFloat(prompt("Enter the Student's fourth grade from 0-100% without the percent sign.", " "));
+    
+    var percentTotal = " "
+
+    var percentTotal = ((percent1 +  percent2 + percent3 + percent4)/4);
+
+    var grade = " "
+        if (percentTotal < 60)
+            {
+                grade = "F";
+                document.write("<p>The Student's grade is "+ grade + ".</p>");
+            }
+        else if (percentTotal >= 60 && percentTotal<= 69.5)
+            {
+                grade = "D";
+                document.write("<p>The Student's grade is "+ grade + ".</p>");
+            }
+        else if (percentTotal >=69.6 && percentTotal <= 79.5)
+            {
+            grade = "C";
+            document.write("<p>The Student's grade is "+ grade + ".</p>");
+            }
+        else if (percentTotal >=79.6 && percentTotal <= 89.5)
+            {
+            grade = "B";
+            document.write("<p>The Student's grade is "+ grade + ".</p>");
+            }
+        else if (percentTotal > 89.5)
+            {
+            grade = "A";
+            document.write("<p>The Student's grade is "+ grade + ".</p>");
+            }
+        else 
+            {
+                document.write("<p>Invalid Entry</p>");
+            }       
+}
+</script>
+</head>
+<body>
+    <div>
+        <p>Please enter the four grades that the Student received including the decimal amount if applicable.</p>
+        <p><input type = "button" value = "Enter Student's Grades" onclick = "enterGrades()" /></p>
+    </div>
+</body>
+</html>

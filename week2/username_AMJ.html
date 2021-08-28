@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+    <head>
+        <title>Assignment 2</title>
+        <script type="text/javascript">
+            function start() {
+                var firstName = " ";
+                var lastName = " ";
+                var schoolName = " ";
+                var userSchool = " ";
+                var firstName = prompt("Enter your first name:", "");
+                var lastName = prompt("Enter your last name:", "");
+                var school = prompt("Enter your School's First Name (do not include Community College, University, etc.):", "");
+                var college = prompt("Enter if your School is a Community College, University, etc.:", "");
+                firstLetter = firstName.charAt(0);
+                secondLetter= lastName.charAt(0);
+                document.getElementById("username").innerHTML = ("Your username is:" + firstLetter + secondLetter + school);
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "username">
+            <center>
+                <p>&nbsp;</p>
+                <input type="button" value="click to generate a username" onclick="start()" />
+            </center>
+        </div>
+    </body>
+</html>
