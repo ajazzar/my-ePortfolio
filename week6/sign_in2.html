@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Aaron Jazzar's Week 6 Assignment</title>
+<script>
+    function checkPhone(phone){
+    var length = 0; var checkLength = false; var message = "";
+        while (checkLength == false)
+        {
+        if (phone.length != 13)
+        {
+            message = "The phone number must be in the form (XXX)XXX-XXXX (where X is a digit). Please try again.";
+            document.getElementById('error_msg').innerHTML = message;
+            phone = document.getElementById(phone).value;            
+        }
+        else if (phone.length == 13)
+        {
+            checkLength = true;
+            message = "good job";
+            document.getElementById('error_msg').innerHTML = message;
+        }
+        }
+    }   
+    
+</script>
+</head>
+<body>
+    <form name = "sign_in" method = "post" id = "sign_in" action = "cgi-bin/data.php">
+        <fieldset>
+            <legend><h2>Sign in Form</h2></legend>
+            <div>
+                <h2>Enter the requested information</h2>
+                <label>First Name:<br /></label>
+                <input type = "text" name = "fname" id = "fname" size = "15" value = "" />
+                <label><br/>Last Name:<br /></label>
+                <input type = "text" name = "lname" id = "lname" size = "15" value = "" />
+                <label><br/>Street Address:<br /></label>
+                <input type = "text" name = "st_address" id = "st_address" size = "30" value = "" />
+                <label><br/>City:<br /></label>
+                <input type = "text" name = "city" id = "city" size = "15" value = "" />
+                <label><br/>State:<br /></label>
+                <input type = "text" name = "state" id = "state" size = "15" value = "" />
+                <label><br/>Zip Code:<br /></label>
+                <input type = "text" name = "zcode" id = "zcode" size = "15" value = "" />
+                <label><br/>Email Address:<br /></label>
+                <input type = "text" name = "email" id = "email" size = "15" value = "" />
+                <label><br/>Phone Number:<br /></label>
+                <input type = "text" name = "phone" id = "phone" size = "15" value = "" />
+                <input type = "button" onClick = "checkPhone('phone')" value = "ok"></button>
+                <p><span id = "error_msg">&nbsp</span></p>
+                <input type = "reset" value = "reset form">
+                <input type = "submit" value = "submit form">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
